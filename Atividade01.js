@@ -30,12 +30,86 @@ estadosNe.push(estado1)
    1) Crie objetos para os demais Estados, segundo o modelo acima, e acrescente-os
       ao vetor estadosNe usando push().
 */
+let estado2 = {
+   nome: 'Alagoas',
+   sigla: 'AL',
+   area: 27848.14,
+   populacao: 3322820
+}
+
+estadosNe.push(estado2)
+
+
+let estado3 = {
+   nome: 'Rio Grande do Norte',
+   sigla: 'RN',
+   area: 52811.05,
+   populacao: 3479010
+}
+
+estadosNe.push(estado3)
+
+let estado4 = {
+   nome: 'Paraíba',
+   sigla: 'PB',
+   area: 56469.78,
+   populacao: 3996496
+}
+
+estadosNe.push(estado4)
+
+  let estado5 = {
+   nome: 'Pernambuco',
+   sigla: 'PE',
+   area: 98148.32,
+   populacao: 9496294
+}
+
+estadosNe.push(estado5)
+
+   let estado6 = {
+   nome: 'Ceará',
+   sigla: 'CE',
+   area: 148920.47,
+   populacao: 9075649
+}
+
+estadosNe.push(estado6)
+
+   let estado7 = {
+   nome: 'Piauí',
+   sigla: 'PI',
+   area: 251577.74,
+   populacao: 3264531
+}
+
+estadosNe.push(estado7)
+
+   let estado8 = {
+   nome: 'Maranhão',
+   sigla: 'MA',
+   area:331937.45,
+   populacao: 7035055
+}
+
+estadosNe.push(estado8)
+
+  let estado9 = {
+   nome: 'Bahia',
+   sigla: 'BA',
+   area:564733.18,
+   populacao: 14812617
+} 
+
+estadosNe.push(estado9)
 
 /*
    2) Escreva uma arrow function que receba dois parÃ¢metros, Ã¡rea e populaÃ§Ã£o, e
       calcule a densidade demogrÃ¡fica retornando o resultado da divisÃ£o da
       segunda pela primeira. 
 */
+
+let densidadeD =(area, populacao)=> populacao/area 
 
 /*
    3) Percorra o vetor estadosNe usando um for tradicional. Para cada estado,
@@ -47,15 +121,28 @@ estadosNe.push(estado1)
 
 */
 
+for(let i = 0; i < estadosNe.length; i++ ){
+ 
+ estadosNe[i]['densidade demográfica'] = densidadeD(estadosNe[i].area,estadosNe[i].populacao)
+   delete estadosNe[i].sigla
+}
+
 /* 4) Escreva uma arrow function que receba um objeto. Na funÃ§Ã£o, use for..in
       para extrair as propriedades e seus valores e exibi-los com console.log().
 
 */
+let retirar =(uf)=> {
+   for(let atrib in uf)
+   console.log(` Atributo:${atrib}; valor: ${uf[atrib]} `)
+}
 
 /* 5) Percorra o vetor estadosNe usando for..of. Para cada objeto no vetor,
       invoque a funÃ§Ã£o escrita em 4) para exibi-lo.
 
 /*
+
+
+
    6)
       a) Declare um vetor vazio.
       b) Insira no vetor criado no item a) apenas o nome de cada Estado, conforme
