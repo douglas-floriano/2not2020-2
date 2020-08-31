@@ -131,9 +131,9 @@ for(let i = 0; i < estadosNe.length; i++ ){
       para extrair as propriedades e seus valores e exibi-los com console.log().
 
 */
-let retirar =(uf)=> {
-   for(let atrib in uf)
-   console.log(` Atributo:${atrib}; valor: ${uf[atrib]} `)
+let retirar =(estado)=> {
+   for(let atribuicao in uf)
+   console.log(` Atributo:${atribuicao}; valor: ${estado[atribuicao]} `)
 }
 
 /* 5) Percorra o vetor estadosNe usando for..of. Para cada objeto no vetor,
