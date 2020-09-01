@@ -127,21 +127,27 @@ for(let i = 0; i < estadosNe.length; i++ ){
    delete estadosNe[i].sigla
 }
 
-/* 4) Escreva uma arrow function que receba um objeto. Na funÃ§Ã£o, use for..in
+/* 
+    4) Escreva uma arrow function que receba um objeto. Na funÃ§Ã£o, use for..in
       para extrair as propriedades e seus valores e exibi-los com console.log().
-
 */
-let retirar =(estado)=> {
-   for(let atribuicao in uf)
-   console.log(` Atributo:${atribuicao}; valor: ${estado[atribuicao]} `)
+
+let retirar = (nome_estado)=> {
+   for(let atribuicao in nome_estado)
+   console.log(` Atributo:${atribuicao}; valor: ${nome_estado[atribuicao]} `)
 }
 
-/* 5) Percorra o vetor estadosNe usando for..of. Para cada objeto no vetor,
-      invoque a funÃ§Ã£o escrita em 4) para exibi-lo.
-
 /*
+     5) Percorra o vetor estadosNe usando for..of. Para cada objeto no vetor,
+      invoque a funÃ§Ã£o escrita em 4) para exibi-lo.
+*/
 
-
+ for(let v of estadosNe){
+   retirar(v)
+   console.log('------------------------------------------------------------------')
+}
+   
+/*
 
    6)
       a) Declare um vetor vazio.
@@ -154,3 +160,16 @@ let retirar =(estado)=> {
          jÃ¡ existentes, e assim por diante.
 
 */
+let vetor =  []
+
+    vetor.push(estadosNe[0].nome)
+    vetor.unshift(estadosNe[1].nome)
+    vetor.splice(1,0, estadosNe[2].nome)
+    vetor.splice(1,0, estadosNe[3].nome)
+    vetor.splice(2,0, estadosNe[4].nome)
+    vetor.splice(1,0, estadosNe[5].nome)
+    vetor.splice(4,0, estadosNe[6].nome)
+    vetor.splice(2,0, estadosNe[7].nome)
+    vetor.splice(1,0, estadosNe[8].nome)
+
+console.log(vetor)
